@@ -28,7 +28,7 @@ def battle(screen, font, player, enemy):
                 elif event.key == pygame.K_2:
                     print(f"{player.name}は防御した！")
                 elif event.key == pygame.K_3:
-                    print("アイテム{item.name}を使います")
+                    print("アイテムを使います（仮）")
         
                 player_defeated = player.take_damage(enemy.attack)
                 if player_defeated:
