@@ -1,6 +1,7 @@
 import pygame
 import sys
 import json
+from combat import Character, battle
 
 pygame.init()
 
@@ -12,7 +13,7 @@ pygame.display.set_caption("Text-Based RPG")
 font = pygame.font.Font(None, 36)
 
 # シナリオ読込
-with open('scenario.json', 'r', encoding='utf-8') as file:
+with open('../scenarios/scenario.json', 'r', encoding='utf-8') as file:
   scenarios = json.load(file)
 
 current_scenario = "start"
@@ -21,6 +22,9 @@ def draw_text(text, x, y):
   lines = text.split('\n')
   for i, line in enumerate(lines):
     screen.blit(font.render(line, True, (255, 255, 255)), (x, y + i * 40))
+
+player = Character("プレイヤー", 100, 20)
+enemy = Character("ドラゴン", 80, 15)
 
 # メインループ
 running = True
@@ -34,6 +38,8 @@ while running:
         choices = list(scenarios[current_scenario]["choices"].values())
         if choices:
           current_scenario = choices[0]
+          if current_scenario == "fight_dragon":
+            battle(player, enemy)
       elif event.key == pygame.K_2:
         choices = list(scenarios[current_scenario]["choices"].values())
         if len(choices) > 1:
