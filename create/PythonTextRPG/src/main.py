@@ -1,8 +1,10 @@
 import pygame
 import sys
 import json
-from combat import Character, battle
-from item import Item, Player
+from player import Player
+from characters import Character
+from combat import battle
+from item import Item
 
 pygame.init()
 
@@ -24,7 +26,7 @@ def draw_text(text, x, y):
   for i, line in enumerate(lines):
     screen.blit(font.render(line, True, (255, 255, 255)), (x, y + i * 40))
 
-player = Character("プレイヤー", 100, 20)
+player = Player("プレイヤー", 100, 20)
 enemy = Character("ドラゴン", 80, 15)
 
 # メインループ
