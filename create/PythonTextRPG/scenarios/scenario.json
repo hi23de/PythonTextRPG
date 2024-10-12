@@ -1,0 +1,51 @@
+{
+  "start": {
+    "text": "あなたは不思議な森にいます。どちらの方向に進みますか？",
+    "choices": {
+      "北": "north_path",
+      "南": "south_path"
+    }
+  },
+  "north_path": {
+    "text": "北の道を進むと、巨大なドラゴンが現れました。どうしますか？",
+    "choices": {
+      "戦う": "fight_dragon",
+      "逃げる": "run_away"
+    }
+  },
+  "south_path": {
+    "text": "南の道を進むと、美しい湖に辿り着きました。どうしますか？",
+    "choices": {
+      "泳ぐ": "swim_lake",
+      "休む": "rest_lake"
+    }
+  },
+  "fight_dragon": {
+    "text": "ドラゴンとの戦闘が始まりました...",
+    "choices": {
+      "次へ": "end"
+    }
+  },
+  "run_away": {
+    "text": "あなたは無事に逃げることができました。",
+    "choices": {
+      "次へ": "end"
+    }
+  },
+  "swim_lake": {
+    "text": "湖で泳ぎ、リフレッシュしました。",
+    "choices": {
+      "次へ": "end"
+    }
+  },
+  "rest_lake": {
+    "text": "湖のほとりで休み、エネルギーを取り戻しました。",
+    "choices": {
+      "次へ": "end"
+    }
+  },
+  "end": {
+    "text": "ゲーム終了。ありがとうございました！",
+    "choices": {}
+  }
+}
