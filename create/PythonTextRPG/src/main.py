@@ -2,6 +2,7 @@ import pygame
 import sys
 import json
 from combat import Character, battle
+from item import Item, Player
 
 pygame.init()
 
@@ -34,16 +35,19 @@ while running:
       pygame.quit()
       sys.exit()
     elif event.type == pygame.KEYDOWN:
-      if event.key == pygame.K_1:
+      if event.key in [pygame.K_1, pygame.K_2, pygame.K_3]:
         choices = list(scenarios[current_scenario]["choices"].values())
-        if choices:
-          current_scenario = choices[0]
+        choice_index = event.key - pygame.K_1
+        if choice_index < len(choices):
+          current_scenario = choices[choice_index]
+          #アイテム取得チェック
+          if "item" in scenarios[current_scenario]:
+            item_data = scenarios[current_scenario]["item"]
+            new_item = Item(item_data["name"], item_data["effect"], item_data["value"])
+            player.inventory.append(new_item)
+            print(f"{new_item.name}を取得した！")
           if current_scenario == "fight_dragon":
             battle(player, enemy)
-      elif event.key == pygame.K_2:
-        choices = list(scenarios[current_scenario]["choices"].values())
-        if len(choices) > 1:
-          current_scenario = choices[1]
 
   #画面の更新
   screen.fill((0, 0, 0))

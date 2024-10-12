@@ -3,7 +3,19 @@
     "text": "あなたは不思議な森にいます。どちらの方向に進みますか？",
     "choices": {
       "北": "north_path",
-      "南": "south_path"
+      "南": "south_path",
+      "辺りを見回す": "find_item"
+    }
+  },
+  "find_item": {
+    "text": "あなたはキラリと光るもの見つけました。アイテムを取得しました。",
+    "item": {
+      "name": "ヒーリングポーション",
+      "effect": "heal",
+      "value": 20
+    },
+    "choices": {
+      "次へ": "start"
     }
   },
   "north_path": {
