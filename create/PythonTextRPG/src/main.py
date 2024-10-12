@@ -10,7 +10,7 @@ screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Text-Based RPG")
 
 # フォント設定
-font = pygame.font.Font(None, 36)
+font = pygame.font.SysFont("Bizudgothic", 36)
 
 # シナリオ読込
 with open('../scenarios/scenario.json', 'r', encoding='utf-8') as file:
