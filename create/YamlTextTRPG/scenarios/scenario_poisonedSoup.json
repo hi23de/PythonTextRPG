@@ -1,0 +1,127 @@
+{
+  "greet": {
+    "text": "Hello! Thank You For Playing!",
+    "choices": {
+      "次へ": "intro"
+    }
+  },
+  "intro": {
+    "text": "毒入りスープ\n\nあなたはある日の夜目を覚ますと正方形の部屋に閉じ込められていました。\n部屋の真ん中には机の上に乗った真っ赤なスープが1つぽつんと置かれています。\nそして椅子の上には地図と、このスープを飲め、というメモ。\nあなたは無事にこの部屋から抜け出すことは出来るのでしょうか。",
+    "choices": {
+      "始める": "prologue"
+    }
+  },
+  "prologue": {
+    "text": "いつも通りの日常のある日の夜、あなたは突然目が覚めました。\n辺りを見回すとそこは\n壁も床もコンクリートでできた\n四方に扉のある正方形の部屋でした。\n服装は白いローブのような襤褸切れで\n他には何も持っていません。",
+    "choices": {
+      "次へ": "first_room"
+    }
+  },
+  "first_room": {
+    "text": "天井の薄暗い豆電球が部屋を照らし、部屋の真ん中には古い木製の長机と椅子が1つあります。\n机の上には赤い無臭のスープが1つ。\n椅子の上には古い紙切れが2つあります。",
+    "choices": {
+      "スープ": "first_soup",
+      "古い紙切れ": "chair",
+      "別の部屋": "choice_rooms"
+    }
+  },
+  "first_soup": {
+    "text": "スープはぐつぐつと沸き立ち、まるで灼熱のマグマのようです。",
+    "choices": {
+      "スープを飲む": "soup_check",
+      "戻る": "first_room"
+    }
+  },
+  "second_room": {
+    "text": "天井の薄暗い豆電球が部屋を照らし、部屋の真ん中には古い木製の長机と椅子が1つあります。\n机の上には赤い無臭のスープが1つ。\n椅子の上には古い紙切れが2つあります。",
+    "choices": {
+      "スープ": "second_soup",
+      "古い紙切れ": "chair",
+      "別の部屋": "choice_rooms"
+    }
+  },
+  "second_soup": {
+    "text": "スープは湯気をたてながら、未だ熱さを保っています。",
+    "choices": {
+      "スープを飲む": "soup_check",
+      "戻る": "second_room"
+    }
+  },
+  "choice_rooms": {
+    "text": "「部屋選択」",
+    "choices": {
+      "北の部屋": "north_room",
+      "東の部屋": "east_room",
+      "南の部屋": "south_room",
+      "西の部屋": "west_room"
+    }
+  },
+  "north_room": {
+    "text": "「北の部屋」",
+    "choices": {
+      "戻る": "choice_rooms"
+    }
+  },
+  "east_room": {
+    "text": "「東の部屋」",
+    "choices": {
+      "戻る": "choice_rooms"
+    }
+  },
+  "south_room": {
+    "text": "「南の部屋」",
+    "choices": {
+      "戻る": "choice_rooms"
+    }
+  },
+  "west_room": {
+    "text": "「西の部屋」",
+    "choices": {
+      "戻る": "choice_rooms"
+    }
+  },
+  "chair": {
+    "text": "古い紙切れが2つ落ちています。\n内容は以下の通りです。\n～ 帰りたいなら 一時間以内に 毒入りスープを飲め。\n飲むまでは 君じゃあここから 出られない。\n一時間以内に 飲めなかったら お迎えが来るぞ ～",
+    "choices": {
+      "次へ": "chair_next"
+    }
+  },
+  "chair_next": {
+    "text": "「地図の内容」",
+    "choices": {
+      "次へ": "first_room"
+    }
+  },
+  "soup_check": {
+    "text": "本当にスープを飲みますか？",
+    "choices": {
+      "いいえ": "first_soup",
+      "はい": "soup_drank"
+    }
+  },
+  "soup_drank": {
+    "text": "「すーぷのんだ」",
+    "choices": {
+      "次へ": "epilogue"
+    }
+  },
+  "epilogue": {
+    "text": "「結末」",
+    "choices": {
+      "次へ": "continue"
+    }
+  },
+  "continue": {
+    "text": "もう一度遊びますか？",
+    "choices": {
+      "はい": "intro",
+      "いいえ": "end"
+    }
+  },
+  "end": {
+    "text": "Thank You For Playing!",
+    "choices": {
+      "はじめに戻る": "greet"
+    }
+  }
+}
