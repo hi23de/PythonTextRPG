@@ -12,7 +12,7 @@ def draw_battle(screen, font, player, enemy):
 def battle(screen, font, player, enemy):
     in_battle = True
     draw_battle(screen, font, player, enemy)
-    
+
     while player.hp > 0 and enemy.hp > 0:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -28,11 +28,12 @@ def battle(screen, font, player, enemy):
                 elif event.key == pygame.K_2:
                     print(f"{player.name}は防御した！")
                 elif event.key == pygame.K_3:
-                    print("アイテム{item.name}を使います")
-        
+                    print("アイテムを使います（仮）")
+
                 player_defeated = player.take_damage(enemy.attack)
                 if player_defeated:
                     print(f"{player.name}が倒されました…")
                     in_battle = False
                     return
+
         draw_battle(screen, font, player, enemy)
