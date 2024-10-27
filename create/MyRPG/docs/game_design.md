@@ -40,3 +40,13 @@
   - `test_character_manager.py`
 - `logs/`<br>デバッグログのディレクトリ
 - `assets/`<br>画像や音声データのディレクトリ
+- `requirements.txt`<br>使用するPythonパッケージをリスト化
+
+## マニュアル
+
+### requirements.txtの記述方法
+
+1. コマンドプロンプトMyRPGフォルダに移動<br>`cd Documents\private\vsCode\create\MyRPG`
+2. インストール済みのパッケージをファイルに書き出し<br>`pip freeze > requirements.txt`
+
+使用方法は`README.txt`に記載
